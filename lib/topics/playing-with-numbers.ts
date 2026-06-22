@@ -361,7 +361,7 @@ const playingWithNumbers: Topic = {
       {
         id: "pwn-mcq-q20",
         question: "Using the rule for 11, which number is divisible by 11?",
-        options: ["2453", "1342", "5280", "7311"],
+        options: ["2451", "1343", "5280", "7311"],
         answerIndex: 2,
         explanation: "For 5280: (5+8) − (2+0) = 13 − 2 = 11, a multiple of 11. So 5280 is divisible by 11.",
         guideRef: "Divisibility rules — and why they work",
