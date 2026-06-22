@@ -1,12 +1,41 @@
 import type { Topic, AnyQuestion, MCQ, QA, ComprehensiveExam } from "../types";
 
+import patterns from "./patterns";
+import knowingNumbers from "./knowing-numbers";
+import wholeNumbers from "./whole-numbers";
+import playingWithNumbers from "./playing-with-numbers";
+import integers from "./integers";
 import fractions from "./fractions";
+import decimals from "./decimals";
+import algebra from "./algebra";
+import ratioProportion from "./ratio-proportion";
+import geometryBasics from "./geometry-basics";
+import shapes from "./shapes";
+import perimeterArea from "./perimeter-area";
+import dataHandling from "./data-handling";
+import symmetry from "./symmetry";
 
-// NOTE: the full registry (14 topics + exam) is assembled after the content
-// subagents author their files. During scaffolding only the sample topic is wired.
-export const TOPICS: Topic[] = [fractions];
+import { comprehensiveExam } from "./exam";
 
-export const EXAM: ComprehensiveExam = { mcqPapers: [], qaPapers: [] };
+// Roughly NCERT chapter order for the home screen.
+export const TOPICS: Topic[] = [
+  patterns,
+  knowingNumbers,
+  wholeNumbers,
+  playingWithNumbers,
+  integers,
+  fractions,
+  decimals,
+  algebra,
+  ratioProportion,
+  geometryBasics,
+  shapes,
+  perimeterArea,
+  dataHandling,
+  symmetry,
+];
+
+export const EXAM: ComprehensiveExam = comprehensiveExam;
 
 export function getTopic(id: string): Topic | undefined {
   return TOPICS.find((t) => t.id === id);
